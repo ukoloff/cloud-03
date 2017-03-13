@@ -44,6 +44,8 @@
 - Добавьте в репозиторий файл
 ```ruby
 # Gemfile
+source 'https://rubygems.org'
+
 gem 'github-pages'
 ```
 - Установите все нужные gem'ы:
