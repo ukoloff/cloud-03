@@ -2,7 +2,8 @@
 
 Материалы к практическим занятиям "Облачные вычисления"
 
-- [Знакомство с Oracle Virtual Box](vbox)
-- [Знакомство с GIT](git)
-- [Сравнение клиентов Git](clients)
-- [Pull requests](pr)
+- [Знакомство с Oracle Virtual Box](vbox/)
+- [Знакомство с GIT](git/)
+- [Сравнение клиентов Git](clients/)
+- [Pull requests](pr/)
+- [GitHub Pages](ghp/)
