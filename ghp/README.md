@@ -77,7 +77,28 @@ layout: default
 - Push
 - Убедитесь, что изменения видны на сайте
 
+## Доменное имя
+
+- Зарегистрируйтесь во [FreeNom][]
+- Займите бесплатное доменное имя в одном из доменов
+    + .tk
+    + .ml
+    + .ga
+    + .cf
+    + .gq
+- В списке доменов нажмите `Manage Domain`
+- Mange Freenom DNS
+- Добавьте запись:
+    + Непустое имя (домен третьего уровня) 
+    + Type: CNAME
+    + Target: *user*.github.io
+- Добавьте в корень репозитория файл `CNAME` с новым доменным именем
+- Commit + Push
+- Убедитесь, что на доменное имя принято (Settings)
+- Подождите
+- Убедитесь, что сайт доступен по новому имени
+
 [Ruby]: https://www.ruby-lang.org/
 [Ruby Installer]: https://rubyinstaller.org/
 [DevKit.wiki]: https://github.com/oneclick/rubyinstaller/wiki/Development-Kit
-
+[FreeNom]: http://www.dot.tk/
