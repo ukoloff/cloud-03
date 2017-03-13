@@ -7,7 +7,7 @@
         + Description
         + .gitignore (теперь точно для `Jekyll`)
         + License
-        + README (*не обязательно*)
+        + ~~README~~
 - Settings / GitHub Pages / Choose a theme
 - Выберите себе тему и создайте сайт
 - Убедитесь, что сайт работает ;-)
@@ -18,7 +18,7 @@
 - Найдите сайты [Ruby][] и [Ruby Installer][] (для Windows)
 - Скачайте:
     + Ruby 
-        * Вероятно, portable
+        * ~~Вероятно, portable~~
         * Достаточно 32-bit
     + DevKit
         * Той же разрядности, что и Ruby
