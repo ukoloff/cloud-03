@@ -39,6 +39,44 @@
 - Установите gem `bundler`
     + gem install bundler
 
+## Установка Jekyll 
+
+- Добавьте в репозиторий файл
+```ruby
+# Gemfile
+gem 'github-pages'
+```
+- Установите все нужные gem'ы:
+    + bundle install
+- Запустите:
+    + jekyll
+    + jekyll build
+    + jekyll serve
+    + Откройте укзазанный адрес в браузере
+
+## Активизация Jekyll
+
+- Добавьте файл `index.md` в корень сайта
+```
+---
+title: Кошмарная домашняя страница
+layout: default
+---
+Дратути
+```
+- Убедитесь, что сайт перекомпилировался
+- Убедитесь, что сайт изменился
+- Отправьте изменения на сервер
+- Убедитесь, что изменения видны на сайте
+
+## Добавление ссылки на README
+
+- Добавьте YAML-пролог в README
+- Добавьте ссылку из index в README
+- Убедитесь, что изменения видны локально
+- Push
+- Убедитесь, что изменения видны на сайте
+
 [Ruby]: https://www.ruby-lang.org/
 [Ruby Installer]: https://rubyinstaller.org/
 [DevKit.wiki]: https://github.com/oneclick/rubyinstaller/wiki/Development-Kit
