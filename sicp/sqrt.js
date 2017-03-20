@@ -1,17 +1,17 @@
 
 sqrt = (x) =>
 {
-  square = x => x * x
+  let square = x => x * x
 
-  is_good = (approx, x) => abs(square(approx) - x) < 1e-3
+  const is_good = (approx, x) => abs(square(approx) - x) < 1e-3
 
-  abs = (x) => x > 0 ? x : -x
+  var abs = (x) => x > 0 ? x : -x
 
-  improve = (approx, x) => avg(approx, x / approx)
+  let improve = (approx, x) => avg(approx, x / approx)
 
-  avg = (a, b) => (a + b) / 2
+  let avg = (a, b) => (a + b) / 2
 
-  iter = (approx, x) => is_good(approx, x) ? approx : iter(improve(approx, x), x)
+  let iter = (approx, x) => is_good(approx, x) ? approx : iter(improve(approx, x), x)
 
   return iter(1, x)
 }
