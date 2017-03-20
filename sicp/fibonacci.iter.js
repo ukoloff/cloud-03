@@ -1,12 +1,8 @@
 function fib(n)
 {
-  var a = 0, b = 1
+  let a = 0, b = 1
   while(n--)
-  {
-    var a0 = a
-    a = b
-    b += a0
-  }
+    [a, b] = [b, a + b]
   return a
 }
 
