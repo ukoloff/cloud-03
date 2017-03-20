@@ -1,5 +1,5 @@
 
-sqrt = (x) =>
+function sqrt(x)
 {
   return iter(1, x)
 
@@ -8,7 +8,7 @@ sqrt = (x) =>
     return x * x
   }
 
-  function is_good(approx, x)
+  function is_good(approx)
   {
     return abs(square(approx) - x) < 1e-3
   }
@@ -18,7 +18,7 @@ sqrt = (x) =>
     return x > 0 ? x : -x
   }
 
-  function improve(approx, x)
+  function improve(approx)
   {
     return avg(approx, x / approx)
   }
@@ -28,7 +28,7 @@ sqrt = (x) =>
     return (a + b) / 2
   }
 
-  function iter(approx, x)
+  function iter(approx)
   {
     return is_good(approx, x) ? approx : iter(improve(approx, x), x)
   }
