@@ -1,15 +1,19 @@
-square = x => x * x
 
-is_good = (approx, x) => abs(square(approx) - x) < 1e-3
+sqrt = (x) =>
+{
+  square = x => x * x
 
-abs = (x) => x > 0 ? x : -x
+  is_good = (approx, x) => abs(square(approx) - x) < 1e-3
 
-improve = (approx, x) => avg(approx, x / approx)
+  abs = (x) => x > 0 ? x : -x
 
-avg = (a, b) => (a + b) / 2
+  improve = (approx, x) => avg(approx, x / approx)
 
-iter = (approx, x) => is_good(approx, x) ? approx : iter(improve(approx, x), x)
+  avg = (a, b) => (a + b) / 2
 
-sqrt = (x) => iter(1, x)
+  iter = (approx, x) => is_good(approx, x) ? approx : iter(improve(approx, x), x)
+
+  return iter(1, x)
+}
 
 console.log("sqrt(5) = ", sqrt(5))
