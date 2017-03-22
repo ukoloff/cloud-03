@@ -12,6 +12,10 @@ append = (accumulator, input)->
   accumulator.push input
   accumulator
 
+compose = (fns...)->
+  fns.reduceRight (accumulator, input)->
+    input accumulator
+
 mapping = (f)-> (reducer)-> (accumulator, input)->
   reducer accumulator, f input
 
@@ -21,6 +25,6 @@ filtering = (f)-> (reducer)-> (accumulator, input)->
   else
     accumulator
 
-dst = src.reduce mapping(inc)(filtering(even)(append)), []
+dst = src.reduce compose(mapping(inc), filtering(even), append), []
 
 console.log dst
