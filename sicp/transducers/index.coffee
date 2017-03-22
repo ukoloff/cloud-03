@@ -1,5 +1,10 @@
-# https://medium.com/@roman01la/understanding-transducers-in-javascript-3500d3bd9624
+###
+https://medium.com/@roman01la/understanding-transducers-in-javascript-3500d3bd9624
 
+See also:
+  https://habrahabr.ru/post/237613/
+  https://habrahabr.ru/post/237733/
+###
 src = [0..10]
 
 square = (x)->
