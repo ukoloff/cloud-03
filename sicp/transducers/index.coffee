@@ -1,12 +1,18 @@
 # https://medium.com/@roman01la/understanding-transducers-in-javascript-3500d3bd9624
 
-src = [1..10]
+src = [0..10]
+
+square = (x)->
+  x * x
 
 inc = (x)->
   x + 1
 
 even = (x)->
   !(x & 1)
+
+lt10 = (x)->
+  x < 10
 
 append = (accumulator, input)->
   accumulator.push input
@@ -25,6 +31,8 @@ filtering = (f)-> (reducer)-> (accumulator, input)->
   else
     accumulator
 
-dst = src.reduce compose(mapping(inc), filtering(even), append), []
+xform = compose filtering(even), filtering(lt10), mapping(square), mapping(inc), append
+
+dst = src.reduce xform, []
 
 console.log dst
