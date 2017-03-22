@@ -8,16 +8,20 @@ inc = (x)->
 even = (x)->
   !(x & 1)
 
-mapping = (f)-> (accumulator, input)->
-  accumulator.push f input
+append = (accumulator, input)->
+  accumulator.push input
   accumulator
 
-filtering = (f)-> (accumulator, input)->
+mapping = (f)-> (reducer)-> (accumulator, input)->
+  reducer accumulator, f input
+
+filtering = (f)-> (reducer)-> (accumulator, input)->
   if f input
-    accumulator.push input
-  accumulator
+    reducer accumulator, input
+  else
+    accumulator
 
-dst = src.reduce mapping(inc), []
-  .reduce filtering(even), []
+dst = src.reduce mapping(inc)(append), []
+  .reduce filtering(even)(append), []
 
 console.log dst
