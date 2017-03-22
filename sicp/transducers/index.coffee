@@ -21,7 +21,6 @@ filtering = (f)-> (reducer)-> (accumulator, input)->
   else
     accumulator
 
-dst = src.reduce mapping(inc)(append), []
-  .reduce filtering(even)(append), []
+dst = src.reduce mapping(inc)(filtering(even)(append)), []
 
 console.log dst
