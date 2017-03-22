@@ -17,5 +17,7 @@ filtering = (f)-> (accumulator, input)->
     accumulator.push input
   accumulator
 
-console.log src.reduce mapping(inc), []
-console.log src.reduce filtering(even), []
+dst = src.reduce mapping(inc), []
+  .reduce filtering(even), []
+
+console.log dst
