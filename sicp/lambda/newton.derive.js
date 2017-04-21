@@ -27,10 +27,7 @@ function newton(f, start)
 function derive(f)
 {
   const dx = 1e-3
-  return function(x)
-  {
-    return (f(x + dx) - f(x)) / dx
-  }
+  return x => (f(x + dx) - f(x)) / dx
 }
 
 console.log("sqrt(2) =", newton(x => x * x - 2, 1))
