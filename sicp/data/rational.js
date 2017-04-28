@@ -1,6 +1,13 @@
 const cons = require('./cons')
 
-const rational = module.exports = exports = cons
+const gcd = (a, b)=>
+  a ? gcd(b % a, a) : b
+
+const rational = module.exports = exports =(nom, denom)=>
+{
+  let z = gcd(nom, denom)
+  return cons(nom / z, denom / z)
+}
 
 const nom = exports.nom = cons.car
 const denom = exports.denom = cons.cdr
