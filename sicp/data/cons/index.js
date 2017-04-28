@@ -1,1 +1,1 @@
-module.exports = require('./func')
+module.exports = require('./lambda')

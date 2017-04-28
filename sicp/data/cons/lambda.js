@@ -1,9 +1,9 @@
 module.exports = exports = (car, cdr)=>
-  n =>
-    n ? cdr : car
+  fn =>
+    fn(car, cdr)
 
 exports.car = (cons)=>
-  cons(0)
+  cons((a, b)=> a)
 
 exports.cdr = (cons)=>
-  cons(1)
+  cons((a, b)=> b)
