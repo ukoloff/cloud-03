@@ -1,1 +1,1 @@
-module.exports = require('./array')
+module.exports = require('./object')
