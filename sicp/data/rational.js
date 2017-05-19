@@ -1,8 +1,5 @@
 const cons = require('./cons')
 
-const gcd = (a, b)=>
-  a ? gcd(b % a, a) : b
-
 const rational = module.exports = exports =(nom, denom)=>
 {
   let z = gcd(nom, denom)
@@ -24,3 +21,7 @@ exports.print = (r)=>
 exports.add = (a, b)=>
   rational(nom(a) * denom(b) + denom(a) * nom(b), denom(a) * denom(b))
 
+function gcd(a, b)
+{
+  return a ? gcd(b % a, a) : b
+}
