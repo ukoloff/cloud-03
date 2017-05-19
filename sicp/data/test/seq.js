@@ -20,3 +20,8 @@ console.log("0 =", seq.count(s0))
 console.log("1 =", seq.count(s1))
 console.log("2 =", seq.count(s2))
 console.log("3 =", seq.count(s3))
+
+console.log("[1, 2, 3, 1, 2] =", seq.toString(seq.append(s3, s2)))
+console.log("[1, 2, 1, 2, 3] =", seq.toString(seq.append(s2, s3)))
+console.log("[1, 2] =", seq.toString(seq.append(s2, s0)))
+console.log("[1, 2] =", seq.toString(seq.append(s0, s2)))

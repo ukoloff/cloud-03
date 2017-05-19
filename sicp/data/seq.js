@@ -28,3 +28,6 @@ const nth = seq.nth = (q, n)=>
 
 const count = seq.count = (q)=>
   isEmpty(q) ? 0 : 1 + count(cdr(q))
+
+const append = seq.append = (a, b)=>
+  isEmpty(a) ? b : seq(car(a), append(cdr(a), b))
