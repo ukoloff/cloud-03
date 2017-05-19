@@ -15,3 +15,8 @@ console.log("2 =", seq.cadr(s3))
 console.log("1 =", seq.nth(s3, 0))
 console.log("2 =", seq.nth(s3, 1))
 console.log("3 =", seq.nth(s3, 2))
+
+console.log("0 =", seq.count(s0))
+console.log("1 =", seq.count(s1))
+console.log("2 =", seq.count(s2))
+console.log("3 =", seq.count(s3))

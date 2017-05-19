@@ -25,3 +25,6 @@ seq.cadr = (q)=>
 
 const nth = seq.nth = (q, n)=>
   isEmpty(q) ? null : n ? nth(cdr(q), n - 1) : car(q)
+
+const count = seq.count = (q)=>
+  isEmpty(q) ? 0 : 1 + count(cdr(q))
