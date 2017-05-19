@@ -8,3 +8,10 @@ console.log("[] =", seq.toString(s0))
 console.log("[1] =", seq.toString(s1))
 console.log("[1, 2] =", seq.toString(s2))
 console.log("[1, 2, 3] =", seq.toString(s3))
+
+console.log("1 =", seq.car(s3))
+console.log("2 =", seq.cadr(s3))
+
+console.log("1 =", seq.nth(s3, 0))
+console.log("2 =", seq.nth(s3, 1))
+console.log("3 =", seq.nth(s3, 2))
