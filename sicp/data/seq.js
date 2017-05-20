@@ -3,16 +3,27 @@
 let cons = require('./cons')
 
 let seq = module.exports = (a, b)=>
-  cons(a, b)
+  inspectable(cons(a, b))
 
 const isEmpty = seq.isEmpty = (q)=>
   q == null
 
-seq.toString = (q)=>
+const toString = seq.toString = (q)=>
 {
   const list = (q, prefix)=>
     isEmpty(q) ? prefix : list(cons.cdr(q), prefix + (prefix ? ', ' : '') + cons.car(q))
   return `[${list(q, '')}]`
+}
+
+function inspect()
+{
+  return toString(this)
+}
+
+function inspectable(fn)
+{
+  fn.toString = inspect
+  return fn
 }
 
 // [0]
