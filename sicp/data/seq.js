@@ -60,11 +60,15 @@ seq.reverse = (q)=>
   return r(q)
 }
 
-const each = seq.each = (q, fn)=>
+seq.each = (q, fn)=>
 {
-  if(isEmpty(q))
-    return
-  fn(car(q))
-  each(cdr(q), fn)
+  step(q, 0)
+  function step(q, n)
+  {
+    if(isEmpty(q))
+      return
+    fn(car(q), n)
+    step(cdr(q), n + 1)
+  }
 }
 
