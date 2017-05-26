@@ -60,7 +60,7 @@ seq.reverse = (q)=>
   return r(q)
 }
 
-seq.each = (q, fn)=>
+seq.each = seq.eachLeft = (q, fn)=>
 {
   step(q, 0)
   function step(q, n)
@@ -69,6 +69,18 @@ seq.each = (q, fn)=>
       return
     fn(car(q), n)
     step(cdr(q), n + 1)
+  }
+}
+
+seq.eachRight = (q, fn)=>
+{
+  step(q, 0)
+  function step(q, n)
+  {
+    if(isEmpty(q))
+      return
+    step(cdr(q), n + 1)
+    fn(car(q), n)
   }
 }
 

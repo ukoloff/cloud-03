@@ -35,3 +35,4 @@ console.log("[42, 27] =", seq.reverse(s2))
 console.log("[7] =", seq.reverse(s1))
 
 seq.each(s3, (n, index)=> console.log(`Each[${index}]:\t${n}`))
+seq.eachRight(s3, (n, index)=> console.log(`Hcae[${index}]:\t${n}`))
