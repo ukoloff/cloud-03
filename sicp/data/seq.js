@@ -59,3 +59,12 @@ seq.reverse = (q)=>
     isEmpty(q) ? result : r(cdr(q), seq(car(q), result))
   return r(q)
 }
+
+const each = seq.each = (q, fn)=>
+{
+  if(isEmpty(q))
+    return
+  fn(car(q))
+  each(cdr(q), fn)
+}
+

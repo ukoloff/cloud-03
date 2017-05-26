@@ -33,3 +33,5 @@ console.log('112 =', seq.last(s3))
 console.log("[112, 109, 108] =", seq.reverse(s3))
 console.log("[42, 27] =", seq.reverse(s2))
 console.log("[7] =", seq.reverse(s1))
+
+seq.each(s3, (n)=> console.log(`Each/${n}`))
