@@ -42,3 +42,9 @@ const count = seq.count = (q)=>
 
 const append = seq.append = (a, b)=>
   isEmpty(a) ? b : seq(car(a), append(cdr(a), b))
+
+const last = seq.last = (q)=>
+{
+  const tail = cdr(q)
+  return tail ? last(tail) : car(q)
+}
