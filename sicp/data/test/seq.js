@@ -36,3 +36,5 @@ console.log("[7] =", seq.reverse(s1))
 
 seq.each(s3, (n, index)=> console.log(`Each[${index}]:\t${n}`))
 seq.eachRight(s3, (n, index)=> console.log(`Hcae[${index}]:\t${n}`))
+
+console.log("[1108, 1109, 1112] =", seq.map(s3, (n)=> n + 1000))

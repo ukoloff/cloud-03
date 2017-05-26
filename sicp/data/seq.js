@@ -84,3 +84,5 @@ seq.eachRight = (q, fn)=>
   }
 }
 
+const map = seq.map = (q, fn)=>
+  isEmpty(q) ? q : seq(fn(car(q)), map(cdr(q), fn))
