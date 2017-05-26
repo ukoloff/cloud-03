@@ -85,4 +85,8 @@ seq.eachRight = (q, fn)=>
 }
 
 const map = seq.map = (q, fn)=>
-  isEmpty(q) ? q : seq(fn(car(q)), map(cdr(q), fn))
+{
+  const traverse = (q, n)=>
+    isEmpty(q) ? q : seq(fn(car(q), n), traverse(cdr(q), n + 1))
+  return traverse(q, 0)
+}
