@@ -48,3 +48,10 @@ const last = seq.last = (q)=>
   const tail = cdr(q)
   return tail ? last(tail) : car(q)
 }
+
+seq.reverse = (q)=>
+{
+  const r = (q, result)=>
+    isEmpty(q) ? result : r(cdr(q), seq(car(q), result))
+  return r(q)
+}

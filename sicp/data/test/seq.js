@@ -30,3 +30,6 @@ console.log('7 =', seq.last(s1))
 console.log('42 =', seq.last(s2))
 console.log('112 =', seq.last(s3))
 
+console.log("[112, 109, 108] =", seq.reverse(s3))
+console.log("[42, 27] =", seq.reverse(s2))
+console.log("[7] =", seq.reverse(s1))
