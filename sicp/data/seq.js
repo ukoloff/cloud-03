@@ -38,7 +38,11 @@ const nth = seq.nth = (q, n)=>
   isEmpty(q) ? null : n ? nth(cdr(q), n - 1) : car(q)
 
 const count = seq.count = (q)=>
-  isEmpty(q) ? 0 : 1 + count(cdr(q))
+{
+  const n = (q, result)=>
+    isEmpty(q) ? result : n(cdr(q), result + 1)
+  return n(q, 0)
+}
 
 const append = seq.append = (a, b)=>
   isEmpty(a) ? b : seq(car(a), append(cdr(a), b))
